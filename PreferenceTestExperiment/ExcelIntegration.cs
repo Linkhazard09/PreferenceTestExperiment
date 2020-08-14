@@ -66,11 +66,53 @@ namespace PreferenceTestExperiment
         //}
 
         //Relevant
+        //Relevant
         public void CreatePart2(string Filepath)
         {
             try
             {
                 workbook.LoadFromFile(Filepath);
+
+                Worksheet sheet2 = workbook.Worksheets[1];
+                sheet2.Name = "Preference Test Results";
+                sheet2.Range["A1"].Text = "Participant (First & Last Name)";
+                sheet2.Range["B1"].Text = "Sequence";
+                sheet2.Range["C1"].Text = "Unlikeable-Likeable";
+                sheet2.Range["D1"].Text = "Ugly-Beautiful";
+                sheet2.Range["E1"].Text = "Ineffective-Effective";
+                sheet2.Range["F1"].Text = "Vague-Clear";
+                sheet2.Range["G1"].Text = "Weak-Strong";
+                sheet2.Range["H1"].Text = "Unfamiliar-Familiar";
+                sheet2.Range["I1"].Text = "Complex-Simple";
+                sheet2.Range["J1"].Text = "Disorganized-Organized";
+                sheet2.Range["K1"].Text = "Cluttered-Uncluttered";
+                sheet2.Range["L1"].Text = "Unrecognizable-Recognizable";
+                sheet2.Range["M1"].Text = "Abstract-Concrete";
+                sheet2.Range["N1"].Text = "Incompatible-Compatible";
+
+                sheet2 = workbook.Worksheets[2];
+                sheet2.Range["L1"].Text = "Unlikeable-Likeable";
+                sheet2.Range["M1"].Text = "Ugly-Beautiful";
+                sheet2.Range["N1"].Text = "Ineffective-Effective";
+                sheet2.Range["O1"].Text = "Vague-Clear";
+                sheet2.Range["P1"].Text = "Weak-Strong";
+                sheet2.Range["Q1"].Text = "Unfamiliar-Familiar";
+                sheet2.Range["R1"].Text = "Complex-Simple";
+                sheet2.Range["S1"].Text = "Disorganized-Organized";
+                sheet2.Range["T1"].Text = "Cluttered-Uncluttered";
+                sheet2.Range["U1"].Text = "Unrecognizable-Recognizable";
+                sheet2.Range["V1"].Text = "Abstract-Concrete";
+                sheet2.Range["W1"].Text = "Incompatible-Compatible";
+
+                try
+                {
+                    workbook.SaveToFile(Filepath);
+                }
+                catch
+                {
+                    MessageBox.Show("Error in accessing the excel file, Please ensure that the excel file is closed and restart the application.", "Error in excel");
+                    return;
+                }
             }
             catch
             {
