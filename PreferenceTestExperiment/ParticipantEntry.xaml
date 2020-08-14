@@ -1,0 +1,25 @@
+﻿<Window x:Class="PreferenceTestExperiment.ParticipantEntry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PreferenceTestExperiment"
+        mc:Ignorable="d"
+        Title="Matching Test Experiment"  Height="620.6" Width="988.8"  MinHeight="620.6" MinWidth="988.8"  MaxHeight="620.6" MaxWidth="988.8"
+       >
+    <Grid>
+
+        <Image HorizontalAlignment="Right" VerticalAlignment="Top" Source="Images/Mapua Logo-01-01.png" Height="100" Margin="0,10,25,0" Width="100"></Image>
+
+        <Image HorizontalAlignment="Right" VerticalAlignment="Top" Source="Images/iemg.jpg" Height="100" Margin="0,10,150,0" Width="100"></Image>
+
+        <TextBlock Style="{StaticResource custom}"   FontSize="50" Margin="363,37,347.4,0"  HorizontalAlignment="Center" VerticalAlignment="Top" ><Run Text="Preference TEST"/></TextBlock>
+        <TextBlock Text="Experiment" Style="{StaticResource custom}" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="356,76,341.4,0" Width="285"/>
+        <TextBlock FontSize="20" Style="{StaticResource RegularText}" TextWrapping="Wrap"  VerticalAlignment="Bottom" Height="106" Margin="0,0,24.4,287.2" HorizontalAlignment="Right" Width="930"><Run Text="In this experiment, you will rate each icon using a 7-point Likert scale. There will be two polar adjectives per Likert scale which you will be using to rate the icons. The closer you choose to the left or right adjective throught the 7-point Likert scale, the better you think the icon fits the adjective. If you chose the middle scale, your opinion is that the icon fits the adjectives equally well."/></TextBlock>
+        <TextBlock Text="Please type your name here:" Margin="66,0,0,218.2" Style="{StaticResource custom}" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <TextBox x:Name="ResponseTextBox" GotFocus="ResponseTextBox_GotFocus" Background="LightGray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextAlignment="Center" FontSize="15" HorizontalAlignment="Left"  Text="Given Name" TextChanged="ResponseTextBox_TextChanged" Foreground="Gray"  Width="197" Margin="50,0,0,175.2" Height="38" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="LastNameTextBox" GotFocus="LastNameTextBox_GotFocus" Foreground="Gray" Text="Last Name" Background="LightGray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextAlignment="Center" FontSize="15" TextChanged="ResponseTextBox_TextChanged" Margin="252,0,0,175.2" HorizontalAlignment="Left" Width="207" Height="38" VerticalAlignment="Bottom"/>
+        <Rectangle Fill="#FFF4F4F5" Margin="0,164,374,0" Stroke="Black" HorizontalAlignment="Right" Width="234" Height="1" VerticalAlignment="Top"/>
+        <Label x:Name="Begin_Label" VerticalAlignment="Bottom" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="BEGIN" FontSize="70" Style="{StaticResource ResourceKey=custom}" Margin="0,0,35,40" HorizontalAlignment="Right" Width="144" MouseLeftButtonDown="Button_Click"/>
+    </Grid>
+</Window>

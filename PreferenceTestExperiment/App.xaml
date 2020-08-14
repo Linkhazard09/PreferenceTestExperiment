@@ -2,8 +2,20 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:PreferenceTestExperiment"
-             StartupUri="MainWindow.xaml">
+             StartupUri="ParticipantEntry.xaml">
     <Application.Resources>
-         
+
+        <Style x:Key="custom">
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/#Bebas Neue"/>
+        </Style>
+        <Style x:Key="RegularText">
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/MADETOMMYMedium_PERSONALUSE.otf#MADE TOMMY"/>
+        </Style>
+
+        <Style x:Key="Light">
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/MADE TOMMY Light_PERSONAL USE.otf#MADE TOMMY"/>
+        </Style>
+
+
     </Application.Resources>
 </Application>
