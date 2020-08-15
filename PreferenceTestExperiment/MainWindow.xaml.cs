@@ -38,10 +38,18 @@ namespace PreferenceTestExperiment
             InitializeComponent();
             this.ParticipantName = ParticipantName;
             this.Filepath = Filepath;
-            ExcelIntegration excel = new ExcelIntegration();
-            excel.CreatePart2(Filepath);
-            Sequence = excel.LoadfromExcel(ParticipantName);
-            Completed = excel.LoadfromExcel2(ParticipantName);
+            try
+            {
+                ExcelIntegration excel = new ExcelIntegration();
+                excel.CreatePart2(Filepath);
+                Sequence = excel.LoadfromExcel(ParticipantName);
+                Completed = excel.LoadfromExcel2(ParticipantName);
+            }
+            catch
+            {
+                System.Windows.Application.Current.Shutdown();
+              
+            }
             Sequence = Sequence.Except(Completed).ToList();
             int x = Sequence.Count - SequenceCtr;
             ImagesRemainingCounter.Content = x.ToString();

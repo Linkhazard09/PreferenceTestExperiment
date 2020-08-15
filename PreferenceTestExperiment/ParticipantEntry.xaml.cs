@@ -64,6 +64,7 @@ namespace PreferenceTestExperiment
             var MainWindow = new MainWindow(name,Filepath);
           
                 MainWindow.Show();
+
                 this.Close();
                
            
@@ -109,6 +110,9 @@ namespace PreferenceTestExperiment
             ofd.Title = "Experiment Test Results";
             ofd.DefaultExt = ".xls";
             string FilePath;
+            ofd.Filter = "Excel |*.xls";
+            
+            
             ofd.Multiselect = false;
             FilePath = ofd.FileName;
             return FilePath;
